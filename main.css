@@ -1,0 +1,74 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Jura, sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 57px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.55);
+}
+
+body {
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: 1920px;
+}
+
+.container {
+    position: absolute;
+    width: 477px;
+    height: 637px;
+    left: 740px;
+    top: 153px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2.5px);
+}
+
+#checkbox {
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*outline: none;*/
+    /*background-color: rgba(0, 0, 0, 0.55);*/
+    /*cursor: pointer;*/
+    /*appearance: none;*/
+}
+
+.checkline {
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+    display: inline;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkline > span {
+    height: 20px;
+}
+
+input {
+    margin-top: 30px;
+    margin-left: 120px;
+    display: block;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+    border: 0;
+    width: 240px;
+    height: 50px;
+    font-family: 'Jura', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
