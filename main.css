@@ -31,44 +31,111 @@ body {
     top: 153px;
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(2.5px);
+    transition-duration: 400ms;
 }
 
-.checkline {
+.control {
     margin-top: 30px;
-    display: inline-block;
-
-    cursor: pointer;
     transition-duration: 400ms;
-}
-
-#checkbox {
-    display: inline;
-    appearance: none;
-    outline: 2px solid transparent;
-    transition-duration: 400ms;
-}
-
-.checkline > span {
-    height: 20px;
-    font-style: normal;
-    font-size: 14px;
+    font-family: Jura, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 17px;
-    text-decoration-line: unset;
-    color: #FFFFFF;
-    transition-duration: 400ms;
-    user-select: none;
+    letter-spacing: -0.05em;
+    display: block;
     position: relative;
-    left: 10px;
-    top: -5px;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
 }
-.checkline:hover > span {
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
     transition-duration: 400ms;
-    text-decoration-line: underline;
+}
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #000000;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    transition-duration: 400ms;
 }
 
-.checkline:hover > #checkbox {
+p {
+    text-decoration-line: none;
+}
+
+.control:hover input ~ .control_indicator {
+    background: #c74a3c;
+}
+
+.control:hover p {
+    text-decoration-line: underline;
     transition-duration: 400ms;
-    outline: 2px solid rgba(226, 93, 74, 0.64);
+}
+
+.control input:checked ~ p {
+    text-decoration-line: underline;
+    transition-duration: 400ms;
+}
+
+.control input:focus ~ .control_indicator {
+    background: black;
+    transition-duration: 400ms;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #c74a3c;
+    transition-duration: 400ms;
+}
+
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #c74a3c;
+    transition-duration: 400ms;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+    transition-duration: 400ms;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+    transition-duration: 400ms;
+}
+
+
+
+.control input:checked ~ .control_indicator:after {
+    display: block;
+    transition-duration: 400ms;
+}
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+    transition-duration: 400ms;
+}
+
+label {
+    user-select: none;
 }
 
 
@@ -107,4 +174,109 @@ input[type="button"] {
     margin-left: -10px;
     cursor: pointer;
     text-decoration-line: underline;
+}
+
+input[type="button"] {
+    text-decoration-line: none;
+    transition-duration: 400ms;
+}
+
+input[type="button"]:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    text-decoration-line: underline;
+    transition-duration: 400ms;
+}
+
+
+.success {
+    color: greenyellow;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 40px;
+    font-family: Jura, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.unsuccess {
+    color: orangered;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-family: Jura, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.deco-fill {
+    fill: rgba(0, 0, 0, 0.45);
+}
+
+.backIndex {
+    z-index: -1;
+}
+
+#triangleEight {
+    z-index: -1;
+    position: absolute;
+    width: 176px;
+    height: 170px;
+    left: 1070px;
+    top: 86px;
+}
+
+#triangleSeven {
+    position: absolute;
+    width: 111.14px;
+    height: 100.06px;
+    left: 1122.89px;
+    top: 725.76px;
+}
+
+#triangleSix {
+    position: absolute;
+    width: 147.07px;
+    height: 133.8px;
+    left: 653px;
+    top: 700.11px;
+}
+
+#triangleFive {
+    position: absolute;
+    width: 85.06px;
+    height: 80.76px;
+    left: 678.93px;
+    top: 385.81px;
+}
+
+#triangleFour {
+    position: absolute;
+    width: 41.63px;
+    height: 36.06px;
+    left: 728.6px;
+    top: 167.46px;
+}
+
+#triangleThree {
+    position: absolute;
+    width: 41.63px;
+    height: 36.06px;
+    left: 719.83px;
+    top: 113.29px;
+}
+
+#triangleTwo {
+    position: absolute;
+    width: 40.22px;
+    height: 40.22px;
+    left: 690.93px;
+    top: 125.78px;
+}
+
+#triangleOne {
+    position: absolute;
+    width: 41.07px;
+    height: 38.99px;
+    left: 688.05px;
+    top: 167.58px;
 }

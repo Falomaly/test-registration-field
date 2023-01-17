@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <title>Registration</title>
   <link rel="stylesheet" href="main.css">
-  <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
 </head>
 <body>
 
 <div class="container">
     <h1 id="title">Регистрация</h1>
+    <p id="registerStatus"></p>
     <form class="register">
 
         <input type="text" id="login" name="login" value="Логин">
         <input type="text" id="pass1" name="pass1" value="Пароль">
         <input type="text" id="pass2" name="pass2" value="Снова пароль">
 
-        <label for="checkbox" class="checkline">
-            <input type="checkbox" id="checkbox" name="licence" value="licenceValue">
-            <span>Ничего не читал но согласен.</span>
+        <label class="control control-checkbox">
+            <input type="checkbox" />
+            <p>Ничего не читал, но согласен.</p>
+            <div class="control_indicator"></div>
         </label>
 
         <input type="button" id="register" name="register" value="Создать аккаунт">
@@ -27,5 +28,24 @@
 </div>
 
 
+<svg id="triangleEight" class="backIndex"><path class="deco-fill" d="M176.81 171.483L0.523438 134.833L120.407 0.489227L176.81 171.483Z" fill="black"></path></svg>
+
+<svg id="triangleSeven" class="backIndex"><path class="deco-fill" d="M0.887512 0.762299L112.027 8.38523L49.8556 100.823L0.887512 0.762299Z" fill="black"></path></svg>
+
+<svg id="triangleSix" class="backIndex"><path class="deco-fill" d="M0 12.9753L147.071 0.108124L84.6786 133.909L0 12.9753Z" fill="black"></path></svg>
+
+<svg id="triangleFive" class="backIndex"><path class="deco-fill" d="M0.92984 0.809082L85.9853 15.0166L31.1535 81.573L0.92984 0.809082Z" fill="black"></path></svg>
+
+<svg id="triangleFour" class="backIndex"><path class="deco-fill" d="M42.2295 0.457917L21.4123 36.5144L0.595062 0.457916L42.2295 0.457917Z" fill="black"></path></svg>
+
+<svg id="triangleThree" class="backIndex"><path class="deco-fill" d="M42.467 0.289491L21.6497 36.346L0.83252 0.28949L42.467 0.289491Z" fill="black"></path></svg>
+
+<svg id="triangleTwo" class="backIndex"><path class="deco-fill" d="M30.3739 0.777863L41.1496 40.9936L0.933868 30.2179L30.3739 0.777863Z" fill="black"></path></svg>
+
+<svg id="triangleOne" class="backIndex"><path class="deco-fill" d="M0.0478821 0.58313L41.1134 7.44264L14.6401 39.5766L0.0478821 0.58313Z" fill="black"></path></svg>
+
+
+
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
